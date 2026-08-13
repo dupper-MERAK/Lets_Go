@@ -1,0 +1,13 @@
+---
+layout: default
+---
+<article class="case-study">
+  <header>
+    <h1>{{ page.title }}</h1>
+    {% if page.summary %}<p class="summary">{{ page.summary }}</p>{% endif %}
+  </header>
+  <section class="body">
+    {{ content }}
+  </section>
+  <p><a href="{{ '/' | relative_url }}">← Back to all case studies</a></p>
+</article>

@@ -1,0 +1,13 @@
+title: "Case Study Site"
+description: "A simple case study site built with Jekyll"
+baseurl: ""
+url: ""
+markdown: kramdown
+theme: minima
+collections:
+  case_studies:
+    output: true
+permalink: /:collection/:name/
+exclude:
+  - "node_modules"
+  - "vendor"

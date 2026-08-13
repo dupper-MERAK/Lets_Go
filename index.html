@@ -1,0 +1,18 @@
+---
+layout: default
+---
+<section class="hero">
+  <h1>{{ site.title }}</h1>
+  <p>{{ site.description }}</p>
+</section>
+<section class="list">
+  <h2>Case studies</h2>
+  <ul>
+  {% for cs in site.case_studies %}
+    <li>
+      <a href="{{ cs.url }}">{{ cs.title }}</a>
+      {% if cs.summary %} — <span class="summary">{{ cs.summary }}</span>{% endif %}
+    </li>
+  {% endfor %}
+  </ul>
+</section>
