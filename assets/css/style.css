@@ -1,0 +1,11 @@
+:root{--wrap:900px;--accent:#2b6cdf}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,Arial,sans-serif;line-height:1.5;margin:0;color:#111}
+.wrap{max-width:var(--wrap);margin:0 auto;padding:24px}
+.site-header{background:#f7f8fb;padding:12px 0;border-bottom:1px solid #eee}
+.brand{font-weight:700;color:var(--accent);text-decoration:none}
+.hero h1{margin:0 0 8px}
+.summary{color:#555}
+.case-study .body{margin-top:12px}
+.site-footer{background:#fafafa;padding:16px 0;border-top:1px solid #eee;margin-top:40px;text-align:center}
+ul{padding-left:1.2rem}
