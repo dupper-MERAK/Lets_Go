@@ -2,8 +2,24 @@
 title: "Designing a Unified Digital Front Door for Public Health"
 date: 2026-08-13
 summary: "Consolidated regional public health websites into one platform serving 500,000+ residents; improved performance, accessibility, and maintainability."
-layout: case_study
+layout: case_study_detailed
+category: "Public Health"
+hero_image: /assets/images/seph-case-study.png
+metrics:
+  - label: "Residents served"
+    value: "500,000+"
+  - label: "Legacy websites"
+    value: "3"
+  - label: "Unified platform"
+    value: "1"
+  - label: "Bilingual"
+    value: "EN / FR"
 tags: [public-health, wordpress, accessibility, design]
+gallery:
+  - /assets/images/seph-case-study.png
+takeaways:
+  - "Prioritize IA and accessibility to improve findability."
+  - "Centralized CMS reduces duplication and maintenance overhead."
 ---
 
 ![Project hero]({{ '/assets/images/seph-case-study.png' | relative_url }})
