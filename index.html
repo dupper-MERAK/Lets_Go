@@ -10,7 +10,7 @@ layout: default
   <ul>
   {% for cs in site.case_studies %}
     <li>
-      <a href="{{ cs.url }}">{{ cs.title }}</a>
+      <a href="{{ cs.url | relative_url }}">{{ cs.title }}</a>
       {% if cs.summary %} — <span class="summary">{{ cs.summary }}</span>{% endif %}
     </li>
   {% endfor %}
