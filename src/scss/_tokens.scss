@@ -1,0 +1,52 @@
+// Design tokens exported from MERAK Figma
+// Converted to Sass variables (SCSS)
+// Source: MERAK Libraries
+
+// Colors
+$color-white-500: #ffffff;
+$color-white-900: #f6f4ee;
+
+$color-red-50: #f5e1e1;
+$color-red-300: #c65858;
+$color-red-500: #ab2121;
+
+$color-plum-300: #b94893;
+$color-plum-500: #8a005c;
+
+$color-grey-50: #dadade;
+$color-grey-100: #c4cbcc;
+$color-grey-500: #535867;
+$color-grey-800: #2f3546;
+
+$color-blue-50: #e6eff3;
+$color-blue-200: #ccdee8;
+$color-blue-500: #5aa0c4;
+$color-blue-700: #005c8a;
+$color-blue-900: #094f72;
+$color-blue-950: #002537;
+
+$color-yellow-50: #fff8e6;
+$color-yellow-500: #ffba00;
+$color-yellow-600: #d49600;
+$color-yellow-700: #aa7700;
+
+$color-purple-300: #925cc1;
+$color-purple-500: #6f2da8;
+
+$color-green-400: #1c8168;
+$color-green-500: #006149;
+
+// Spacing (px)
+$space-2x-small: 2px;
+$space-x-small: 4px;
+$space-small: 8px;
+$space-regular: 16px;
+$space-large: 32px;
+$space-x-large: 64px;
+$space-2x-large: 128px;
+
+// Convenience aliases
+$color-accent: $color-blue-500;
+$color-accent-dark: $color-blue-700;
+$color-text: $color-grey-800;
+$color-bg: $color-white-900;
