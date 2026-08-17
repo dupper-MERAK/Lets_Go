@@ -6,7 +6,7 @@ layout: case_study
 tags: [public-health, wordpress, accessibility, design]
 ---
 
-![Project hero](/assets/images/seph-case-study.png)
+![Project hero]({{ '/assets/images/seph-case-study.png' | relative_url }})
 
 ## Overview
 Consolidated three regional public health websites into a single platform to serve residents reliably, improve accessibility, and reduce operational duplication.
