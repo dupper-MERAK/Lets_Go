@@ -1,0 +1,57 @@
+---
+layout: default
+---
+<article class="case-study-detailed">
+  <header class="cs-hero">
+    <div class="wrap cs-hero-inner">
+      <div class="cs-hero-text">
+        <p class="eyebrow">{{ page.category | default: 'Case Study' }}</p>
+        <h1>{{ page.title }}</h1>
+        {% if page.summary %}<p class="cs-lead">{{ page.summary }}</p>{% endif %}
+        <div class="cs-metrics">
+          {% for m in page.metrics %}
+            <div class="cs-metric">
+              <div class="value">{{ m.value }}</div>
+              <div class="label">{{ m.label }}</div>
+            </div>
+          {% endfor %}
+        </div>
+        {% if page.call_to_action_text and page.call_to_action_url %}
+          <p><a class="cs-cta" href="{{ page.call_to_action_url }}">{{ page.call_to_action_text }}</a></p>
+        {% endif %}
+      </div>
+      <div class="cs-hero-image">
+        {% if page.hero_image %}
+          <img src="{{ page.hero_image | relative_url }}" alt="{{ page.title }} hero">
+        {% endif %}
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap cs-body">
+    {{ content }}
+
+    {% if page.gallery and page.gallery.size > 0 %}
+    <section class="cs-gallery">
+      {% for img in page.gallery %}
+        <figure>
+          <img src="{{ img | relative_url }}" alt="">
+        </figure>
+      {% endfor %}
+    </section>
+    {% endif %}
+
+    <section class="cs-takeaways">
+      {% if page.takeaways %}
+        <h2>Takeaways</h2>
+        <ul>
+        {% for t in page.takeaways %}
+          <li>{{ t }}</li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    </section>
+
+    <p><a href="{{ '/' | relative_url }}">← Back to all case studies</a></p>
+  </main>
+</article>
