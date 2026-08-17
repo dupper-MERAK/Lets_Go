@@ -1,0 +1,12 @@
+{
+  "name": "lets_go-case-studies",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "sass": "^1.74.1"
+  },
+  "scripts": {
+    "build:sass": "sass src/scss:assets/css --no-source-map",
+    "watch:sass": "sass --watch src/scss:assets/css --no-source-map"
+  }
+}
