@@ -1,0 +1,27 @@
+@mixin container-width {
+  width: min(calc(100% - 48px), var(--wrap));
+  margin: 0 auto;
+}
+
+@mixin respond-to($breakpoint) {
+  @if $breakpoint == sm {
+    @media (max-width: 460px) { @content; }
+  } @else if $breakpoint == md {
+    @media (max-width: 760px) { @content; }
+  } @else if $breakpoint == lg {
+    @media (max-width: 980px) { @content; }
+  } @else {
+    @warn "Unknown breakpoint: #{$breakpoint}.";
+  }
+}
+
+@mixin card-surface($bg: rgba(255, 255, 255, 0.06), $radius: 10px) {
+  background: $bg;
+  border-radius: $radius;
+  text-align: left;
+}
+
+@mixin focus-ring {
+  outline: 2px solid rgba(255, 186, 0, 0.8);
+  outline-offset: 2px;
+}

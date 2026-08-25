@@ -1,0 +1,33 @@
+name: Build and upload site
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - dupper-merak-fuzzy-parakeet
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 3.1
+          bundler-cache: true
+      - name: Install dependencies
+        run: |
+          if [ -f Gemfile ]; then
+            bundle install --jobs 4 --retry 3
+          fi
+      - name: Build Jekyll site
+        env:
+          JEKYLL_ENV: production
+        run: |
+          bundle exec jekyll build --destination _site || jekyll build --destination _site
+      - name: Upload _site artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: site
+          path: _site

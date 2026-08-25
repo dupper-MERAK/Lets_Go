@@ -1,0 +1,201 @@
+.cs-intro {
+  background: var(--blue);
+  color: #fff;
+}
+
+.cs-intro-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--hero-gap);
+  align-items: center;
+}
+
+.cs-intro h1 {
+  max-width: 640px;
+  margin: 0;
+  font-size: clamp(36px, 5vw, 64px);
+  line-height: 1.06;
+  font-weight: 800;
+}
+
+.cs-lead {
+  max-width: 540px;
+  margin: 20px 0 0;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 17px;
+}
+
+.cs-intro-visual img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.cs-meta {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 36px;
+}
+
+.cs-meta div {
+  @include card-surface();
+  padding: 18px;
+}
+
+.cs-meta div strong {
+  display: block;
+  color: var(--yellow);
+  font-size: 20px;
+}
+
+.cs-meta div span {
+  display: block;
+  margin-top: 6px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 12px;
+}
+
+.cs-container {
+  padding: var(--space-extra-extra-large) 0;
+}
+
+.cs-challenge {
+  background: var(--yellow);
+  color: var(--navy);
+}
+
+.cs-challenge h2,
+.cs-discovery h2,
+.cs-solution h2,
+.cs-approach h2,
+.cs-results h2 {
+  max-width: 900px;
+  margin: 0;
+  font-size: clamp(28px, 4vw, 46px);
+  line-height: 1.08;
+}
+
+.cs-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 34px;
+}
+
+.cs-columns h3 {
+  margin: 0 0 8px;
+  color: var(--blue);
+  font-size: 16px;
+}
+
+.cs-solution {
+  background: var(--sky);
+}
+
+.cs-gallery figure:first-child {
+  grid-column: 1 / 2;
+}
+
+.cs-approach-grid {
+  padding: var(--space-large) 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-large);
+  align-items: center;
+}
+
+.cs-approach-grid img {
+  width: 100%;
+}
+
+.cs-quote {
+  padding: 86px 0;
+  background: var(--navy);
+  color: #fff;
+  text-align: center;
+}
+
+.cs-quote blockquote {
+  margin: 0;
+  font-size: clamp(26px, 4vw, 44px);
+  font-weight: 700;
+}
+
+.cs-quote cite {
+  display: block;
+  margin-top: 18px;
+  color: var(--yellow);
+  font-size: 13px;
+}
+
+.cs-results {
+  background: var(--paper);
+  padding: 76px 0;
+}
+
+.cs-result-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+  margin-top: var(--space-medium);
+}
+
+.cs-result-grid .result {
+  background: var(--blue);
+  padding: 28px;
+  border-radius: 10px;
+  color: #fff;
+  text-align: left;
+}
+
+.cs-result-grid .result strong {
+  display: block;
+  color: var(--yellow);
+  font-size: 20px;
+}
+
+.cs-result-grid .result span {
+  display: block;
+  margin-top: 10px;
+  font-size: 13px;
+}
+
+@include respond-to(lg) {
+  .cs-intro-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .cs-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-meta {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include respond-to(md) {
+  .cs-intro {
+    padding: var(--space-medium) 0;
+  }
+
+  .cs-columns,
+  .cs-result-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@include respond-to(sm) {
+  .cs-container {
+    padding: var(--space-medium);
+  }
+
+  .cs-intro h1 {
+    font-size: 40px;
+  }
+
+  .cs-meta strong {
+    font-size: 16px;
+  }
+}

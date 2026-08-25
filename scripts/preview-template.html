@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ page.title }}</title>
+  <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+  <article class="case-study-detailed">
+    <header class="cs-nav">
+      <a class="cs-logo" href="preview.html" aria-label="MERAK home">MERAK<span>Systems</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#services">Services</a><a href="#work">Our Work</a><a href="#about">About Us</a><a href="#blog">Blog</a>
+      </nav>
+      <a class="cs-contact" href="mailto:hello@merak.ca">Let's Talk</a>
+    </header>
+
+    <main>
+      <section class="cs-intro">
+        <div class="cs-container cs-intro-grid">
+          <div class="cs-intro-copy">
+            <p class="cs-kicker--light">{{ page.category }}</p>
+            <h1>{{ page.title }}</h1>
+            <p class="cs-lead">{{ page.summary }}</p>
+            <div class="cs-meta">
+              {% for m in page.metrics limit: 4 %}<div><strong>{{ m.value }}</strong><span>{{ m.label }}</span></div>{% endfor %}
+            </div>
+          </div>
+          <figure class="cs-intro-visual"><img src="{{ page.hero_image }}" alt="{{ page.title }} project preview"></figure>
+        </div>
+      </section>
+
+      <section class="cs-challenge" id="challenge"><div class="cs-container"><p class="cs-kicker">The challenge</p><h2>{{ page.challenge_title }}</h2><p>{{ page.challenge }}</p></div></section>
+      <section class="cs-discovery" id="discovery"><div class="cs-container"><p class="cs-kicker">Discovery &amp; planning</p><h2>{{ page.discovery_title }}</h2><div class="cs-columns">{% for item in page.discovery_points %}<div><h3>{{ item.title }}</h3><p>{{ item.text }}</p></div>{% endfor %}</div></div></section>
+      <section class="cs-solution" id="solution"><div class="cs-container"><p class="cs-kicker">The solution</p><h2>{{ page.solution_title }}</h2><p class="cs-section-lead">{{ page.solution }}</p><div class="cs-gallery">{% for img in page.gallery %}<figure><img src="{{ img }}" alt="{{ page.title }} interface detail"></figure>{% endfor %}</div></div></section>
+      <section class="cs-approach"><div class="cs-container"><p class="cs-kicker">Our approach</p><h2>{{ page.approach_title }}</h2><div class="cs-approach-grid"><img src="{{ page.hero_image }}" alt="Project interface"><div>{% for item in page.approach_points %}<h3>{{ item.title }}</h3><p>{{ item.text }}</p>{% endfor %}</div></div></div></section>
+      <section class="cs-quote"><div class="cs-container"><blockquote>“{{ page.quote }}”</blockquote><cite>{{ page.quote_attribution }}</cite></div></section>
+      <section class="cs-results"><div class="cs-container"><p class="cs-kicker">The impact</p><h2>{{ page.results_title }}</h2><div class="cs-result-grid">{% for result in page.results %}<div><strong>{{ result.value }}</strong><span>{{ result.label }}</span></div>{% endfor %}</div></div></section>
+    </main>
+
+    <footer class="cs-footer"><div class="cs-container cs-footer-grid"><div><strong>MERAK</strong><p>17A-218 Silvercreek Parkway N.<br>Suite 356<br>Guelph, Ontario, N1H 8E8</p><p>+1 519.767.1292</p></div><div class="cs-footer-links"><a href="#services">Services</a><a href="#work">Our Work</a><a href="#about">About Us</a><a href="#blog">Blog</a></div><div class="cs-footer-mark">MERAK<span>Systems Corporation</span></div></div><div class="cs-copyright"><div class="cs-container">Copyright 1994 - 2026 MERAK Systems Corporation. All rights reserved.</div></div></footer>
+  </article>
+</body>
+</html>

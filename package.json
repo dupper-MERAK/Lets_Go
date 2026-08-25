@@ -1,0 +1,24 @@
+{
+  "name": "lets_go-case-studies",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "sass": "^1.74.1",
+    "chokidar": "^3.5.3",
+    "gray-matter": "^4.0.3",
+    "livereload": "^0.9.3",
+    "concurrently": "^8.2.0",
+    "browser-sync": "^2.29.3"
+  },
+  "scripts": {
+    "serve": "browser-sync start --server _site --files \"_site/**/*\" --port 4000 --no-open",
+    "build:sass": "sass src/scss:assets/css --no-source-map",
+    "watch:sass": "sass --watch src/scss:assets/css --no-source-map",
+    "build:preview": "node scripts/watch-md.js",
+    "build:preview:once": "node scripts/watch-md.js --once",
+    "watch:md": "node scripts/watch-md.js",
+    "build:site": "node scripts/watch-site.js",
+    "watch:site": "node scripts/watch-site.js",
+    "dev": "concurrently -k \"npm run build:preview\" \"npm run build:site\" \"npm run watch:sass\" \"npm run serve\""
+  }
+}
